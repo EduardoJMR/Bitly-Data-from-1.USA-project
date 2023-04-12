@@ -8,7 +8,7 @@
 - Country
 - Web page visited
 
-## what are the 10 time zones with the highest presence?
+## What are the 10 time zones with the highest presence?
 
 ### Transforming the data
 
@@ -124,10 +124,6 @@ agg_counts= by_tz_os.size().unstack().fillna(0)
 agg_counts.head(20)
 ```
 ![image](https://github.com/EduardoJMR/Bitly-Data-from-1.USA-project/blob/master/images/Capture7.JPG)
-
-## Top time zones by Windows and non-Windows users?
-
-### Transforming the data
 
 #### Once we knew the number of users who use windows by time zone, we decided to plot the ten time zones with the highest user traffic sorted by those who use windows and those who do not.
 #### To do this, we first create an index to regroup the agg_cpunts table. This 'index' will take into account the total number of users using the sum of both windows and non-windows, by time zone, . sum("columns"), will reorder them according to their index using argsort().
